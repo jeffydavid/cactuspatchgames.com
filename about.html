@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Cactus Patch Games</title>
+  <meta name="description" content="Cactus Patch Games is a two-person indie game studio based in the Texas Hill Country." />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Inter:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:   #F5A800;
+      --purple: #7C3FC4;
+      --sky:    #9AC8D8;
+      --dark:   #1A1624;
+      --dark2:  #221D30;
+      --cream:  #F2EDE6;
+      --muted:  rgba(242,237,230,0.55);
+    }
+
+    html, body {
+      min-height: 100%;
+      background: var(--dark);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    nav a.home {
+      display: flex;
+      align-items: center;
+    }
+    nav img {
+      height: 48px;
+      width: auto;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
+    nav ul a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.15s;
+    }
+    nav ul a:hover,
+    nav ul a[aria-current="page"] {
+      color: var(--gold);
+    }
+
+    /* ── PAGE CONTENT ── */
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 24px 100px;
+    }
+
+    /* eyebrow */
+    .eyebrow {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      color: var(--cream);
+      margin-bottom: 40px;
+    }
+    h1 span {
+      color: var(--gold);
+    }
+
+    /* divider */
+    .rule {
+      width: 48px;
+      height: 3px;
+      background: var(--purple);
+      border-radius: 2px;
+      margin-bottom: 40px;
+    }
+
+    /* body copy */
+    .body-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(242,237,230,0.85);
+    }
+    .body-copy p strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+
+    /* ── CONTACT BLOCK ── */
+    .contact {
+      margin-top: 64px;
+      background: var(--dark2);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 36px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .contact .label {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sky);
+    }
+    .contact .email-link {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      color: var(--gold);
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .contact .email-link:hover { opacity: 0.75; }
+    .contact .sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 32px 24px;
+      display: flex;
+      justify-content: center;
+    }
+    footer img {
+      height: 52px;
+      width: auto;
+      opacity: 0.7;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      nav ul { gap: 20px; }
+      .contact { padding: 28px 24px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="home" href="index.html">
+      <img src="Cactus-Patch-Games-LLC-Light.png" alt="Cactus Patch Games" />
+    </a>
+    <ul>
+      <li><a href="index.html">Games</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+
+    <p class="eyebrow">The studio</p>
+    <h1>Two people.<br /><span>One big idea.</span></h1>
+    <div class="rule"></div>
+
+    <div class="body-copy">
+      <p>
+        Cactus Patch Games is an independent game studio founded by <strong>Jeff and Kate</strong>,
+        a husband-and-wife team working out of the <strong>Texas Hill Country</strong>.
+        We started CPG because we wanted to make the kinds of games we grew up loving —
+        games with character, heart, and enough challenge to keep you coming back.
+      </p>
+      <p>
+        Our first title is <strong>CottonTail</strong>, a third-person action platformer
+        about a scrappy rabbit and her mech companion taking on whatever the world throws at them.
+        It's the game we've been building toward, and we can't wait to get it into your hands.
+      </p>
+      <p>
+        We're a small studio by choice. Every decision — design, code, art, business — gets
+        real attention because there's no one to hand it off to. We think that shows in the work.
+      </p>
+    </div>
+
+    <div class="contact">
+      <p class="label">Get in touch</p>
+      <a class="email-link" href="mailto:info@cactuspatchgames.com">
+        info@cactuspatchgames.com
+      </a>
+      <p class="sub">Press inquiries, questions, or just want to say hi — we read everything.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <img src="Cactus-Patch-Games-LLC-Light.png" alt="Cactus Patch Games" />
+  </footer>
+
+</body>
+</html>

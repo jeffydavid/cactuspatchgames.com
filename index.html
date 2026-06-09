@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CottonTail — Cactus Patch Games</title>
+  <meta name="description" content="CottonTail — a third-person action platformer. Coming soon on Steam." />
+
+  <style>
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 10;
+    }
+    nav a.home { display: flex; align-items: center; }
+    nav .logo-nav { height: 48px; width: auto; }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul a {
+      color: rgba(242,237,230,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.15s;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    }
+    nav ul a:hover, nav ul a[aria-current="page"] { color: #F5A800; }
+  
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Inter:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:   #F5A800;
+      --purple: #7C3FC4;
+      --sky:    #9AC8D8;
+      --dark:   #1A1624;
+      --cream:  #F2EDE6;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--dark);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── HERO BANNER ── */
+    .hero {
+      width: 100%;
+      position: relative;
+      line-height: 0;
+    }
+    .hero img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    /* sky-toned gradient fade into the dark bg */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 40%;
+      background: linear-gradient(to bottom, transparent, var(--dark));
+      pointer-events: none;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .stage {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    /* capsule art */
+    .capsule {
+      width: min(480px, 90%);
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+      margin-top: -60px; /* pulls it up over the hero fade */
+      position: relative;
+      z-index: 2;
+    }
+
+    /* tagline */
+    .tagline {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--sky);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* Steam CTA */
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 1.15rem;
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 8px;
+      letter-spacing: 0.02em;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 20px rgba(245,168,0,0.35);
+    }
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(245,168,0,0.5);
+    }
+    .cta:active { transform: translateY(0); }
+
+    /* Steam icon (inline SVG so no extra file needed) */
+    .cta svg { flex-shrink: 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 32px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    footer img {
+      height: 64px;
+      width: auto;
+      opacity: 0.85;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      .capsule { margin-top: -32px; }
+      .cta { font-size: 1rem; padding: 14px 28px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cta { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="home" href="index.html">
+      <img class="logo-nav" src="Cactus-Patch-Games-LLC-Light.png" alt="Cactus Patch Games" />
+    </a>
+    <ul>
+      <li><a href="index.html" aria-current="page">Games</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Wide banner art -->
+  <div class="hero" style="position:relative;">
+    <img src="library_hero.png" alt="CottonTail — rabbit hero and mech companion in a field" />
+  </div>
+
+  <main class="stage">
+
+    <!-- Main capsule art with game logo -->
+    <img
+      class="capsule"
+      src="store_capsule_main.png"
+      alt="CottonTail game art"
+    />
+
+    <p class="tagline">A third-person action platformer &mdash; coming soon</p>
+
+    <!-- Steam wishlist button -->
+    <!-- Replace # with your actual Steam store URL once the coming-soon page is live -->
+    <a class="cta" href="https://store.steampowered.com/app/4783590/CottonTail/" target="_blank" rel="noopener">
+      <!-- Steam logo mark -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.003.187.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.03 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.718L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.297-.249-1.904-.03l1.522.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.252 0-2.265-1.014-2.265-2.265z"/>
+      </svg>
+      Wishlist on Steam
+    </a>
+
+  </main>
+
+  <footer>
+    <img src="Cactus-Patch-Games-LLC-Light.png" alt="Cactus Patch Games" />
+  </footer>
+
+</body>
+</html>
